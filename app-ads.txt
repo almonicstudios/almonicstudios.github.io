@@ -1,2 +1,1 @@
-# AdMob publisher ID goes here once the AdMob account is set up:
-# google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+google.com, pub-9928201381492640, DIRECT, f08c47fec0942fa0
