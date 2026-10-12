@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cage Champ Support</title>
+<meta name="description" content="Help, answers and contact for Cage Champ, the MMA card-fight career game from Almonic Studios.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Nunito:wght@600;800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1b1035; --ink2: #3b2d63; --cream: #fff6e0; --cream2: #f3e6c4;
+    --violet: #7b4dff; --violet2: #4e2bb8; --red: #ff4d5e; --gold: #ffc93c;
+    --green: #2fd36b; --blue: #3b8bff; --bg: #6a3df0; --text: #1b1035; --muted: #5a4d80;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--bg);
+    background-image: radial-gradient(circle at 50% -10%, #9a72ff 0, var(--bg) 55%, #3a1d9a 100%);
+    background-attachment: fixed; color: var(--text);
+    font: 700 16px/1.6 "Nunito", system-ui, -apple-system, "Segoe UI", sans-serif;
+    padding: 24px 16px 48px;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  header { text-align: center; margin-bottom: 22px; }
+  .logo { display: inline-block; line-height: .9; font-family: "Luckiest Guy", "Nunito", sans-serif; letter-spacing: .5px; }
+  .logo .cage { display: inline-block; background: var(--red); color: #fff; font-size: 30px; padding: 8px 16px 4px; border: 3px solid var(--ink); border-radius: 12px; box-shadow: 0 5px 0 var(--ink); transform: rotate(-2deg); -webkit-text-stroke: 1.5px var(--ink); paint-order: stroke fill; }
+  .logo .champ { display: block; color: var(--gold); font-size: 54px; margin-top: 6px; -webkit-text-stroke: 3px var(--ink); paint-order: stroke fill; text-shadow: 0 5px 0 var(--ink); }
+  .pill { display: inline-block; margin-top: 14px; background: var(--cream); border: 3px solid var(--ink); border-radius: 999px; padding: 4px 16px 2px; font-family: "Luckiest Guy", sans-serif; font-size: 15px; letter-spacing: 1px; box-shadow: 0 4px 0 var(--ink); }
+  .panel { background: var(--cream); border: 3px solid var(--ink); border-radius: 20px; box-shadow: 0 8px 0 var(--ink); overflow: hidden; margin-bottom: 22px; }
+  .panel h2 { margin: 0; background: var(--violet); color: #fff; font: 400 22px/1.2 "Luckiest Guy", sans-serif; letter-spacing: .5px; padding: 14px 18px 10px; border-bottom: 3px solid var(--ink); -webkit-text-stroke: 1px var(--ink); paint-order: stroke fill; }
+  .panel .body { padding: 6px 18px 16px; }
+  .short { background: #fff; border: 3px solid var(--ink); border-radius: 14px; padding: 12px 14px; margin: 14px 0 6px; font-weight: 800; }
+  h3 { font: 400 19px/1.25 "Luckiest Guy", sans-serif; letter-spacing: .4px; margin: 20px 0 4px; color: var(--ink); }
+  p { margin: 8px 0; }
+  ul { margin: 8px 0; padding-left: 20px; }
+  li { margin: 5px 0; }
+  a { color: var(--violet2); font-weight: 900; text-decoration-thickness: 2px; text-underline-offset: 2px; }
+  .muted { color: var(--muted); font-size: 14px; }
+  nav { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin: 4px 0 20px; }
+  .btn { display: inline-block; font: 400 17px/1 "Luckiest Guy", sans-serif; letter-spacing: .5px; color: #fff; text-decoration: none; background: var(--green); border: 3px solid var(--ink); border-radius: 14px; padding: 12px 18px 9px; box-shadow: 0 5px 0 var(--ink); -webkit-text-stroke: 1px var(--ink); paint-order: stroke fill; }
+  .btn.ghost { background: #fff; color: var(--ink); -webkit-text-stroke: 0; }
+  .btn:active { transform: translateY(4px); box-shadow: 0 1px 0 var(--ink); }
+  footer { text-align: center; color: #efe8ff; font-size: 14px; }
+  footer a { color: #fff; }
+  @media (max-width: 380px) { .logo .champ { font-size: 44px; } .panel h2 { font-size: 20px; } }
+  details { background: #fff; border: 3px solid var(--ink); border-radius: 14px; margin: 12px 0; box-shadow: 0 4px 0 var(--ink); }
+  summary { cursor: pointer; list-style: none; padding: 13px 44px 11px 14px; position: relative; font-weight: 900; font-size: 17px; line-height: 1.35; }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "+"; position: absolute; right: 12px; top: 50%; transform: translateY(-50%); width: 26px; height: 26px; border: 3px solid var(--ink); border-radius: 50%; background: var(--gold); font: 400 18px/22px "Luckiest Guy", sans-serif; text-align: center; }
+  details[open] summary::after { content: "\2212"; background: var(--cream2); }
+  details[open] summary { border-bottom: 3px dashed var(--cream2); }
+  details .a { padding: 4px 14px 12px; }
+  .tag { display: inline-block; font: 400 13px/1 "Luckiest Guy", sans-serif; letter-spacing: .5px; background: var(--ink); color: var(--cream); border-radius: 999px; padding: 5px 9px 3px; margin-right: 6px; vertical-align: 2px; }
+  .contact { text-align: center; padding: 16px 18px 20px; }
+  .contact .mail { font: 400 22px/1.2 "Luckiest Guy", sans-serif; word-break: break-word; }
+  code { background: var(--cream2); border: 2px solid var(--ink); border-radius: 6px; padding: 0 5px; font-size: 14px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo"><span class="cage">CAGE</span><span class="champ">CHAMP</span></div>
+    <div><span class="pill">SUPPORT</span></div>
+  </header>
+
+  <nav><a class="btn" href="mailto:almonicstudios@gmail.com?subject=Cage%20Champ%20help">Email us</a><a class="btn ghost" href="privacy.html">Privacy policy</a></nav>
+
+  <section class="panel">
+    <h2>Need a hand?</h2>
+    <div class="body">
+      <p>Cage Champ is made by one person, so you'll get a reply from the developer. Most answers are below. If yours isn't, email <a href="mailto:almonicstudios@gmail.com">almonicstudios@gmail.com</a> and I'll get back to you, usually within a couple of days.</p>
+      <p>Settings is in the menu: tap <b>☰</b> at the top right, then the <b>Settings</b> tile. Your version number is at the bottom of Settings.</p>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>Your save</h2>
+    <div class="body">
+      <details>
+        <summary>Where is my progress saved?</summary>
+        <div class="a"><p>On your phone only, in the app's own storage. There's no account and no cloud save. That keeps things private, but it means deleting the app deletes your career. So make a backup now and then (next question).</p></div>
+      </details>
+      <details>
+        <summary>How do I back up my save, or move it to a new phone?</summary>
+        <div class="a">
+          <p>Tap <b>☰</b> (top right), then <b>Settings</b>, and scroll to <b>Backup save</b>.</p>
+          <ul>
+            <li><span class="tag">SAVE</span>Tap <b>EXPORT</b>, then <b>COPY</b>. Paste the text somewhere safe, like your Notes app or an email to yourself.</li>
+            <li><span class="tag">LOAD</span>On the new phone (or after a reinstall), get into the game, open the same box, paste the text in and tap <b>IMPORT</b>.</li>
+          </ul>
+          <p>Anyone with that text can load your fighter, so keep it to yourself.</p>
+        </div>
+      </details>
+      <details>
+        <summary>I deleted the app and lost my career. Can you get it back?</summary>
+        <div class="a"><p>Sorry, no. Your save never leaves your phone, so there's no copy on our side. If you exported a backup at any point, import that and you're back to where it was saved.</p></div>
+      </details>
+      <details>
+        <summary>How do I start again from scratch?</summary>
+        <div class="a"><p>Settings, then <b>Reset save</b> at the bottom. It asks you to confirm, and it can't be undone. If you just want a fresh fighter but to keep your progress, win the belt and then <b>Retire</b> your champion in Settings instead: it banks Legacy, and the next fighter starts stronger.</p></div>
+      </details>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>Your career</h2>
+    <div class="body">
+      <details>
+        <summary>I won the belt. What now?</summary>
+        <div class="a"><p>Now you defend it. Each challenger is tougher than the last and the purse keeps growing. After a few defences your fighter starts to get old: his stats slip a little after every fight, and training can't keep up for ever. If you lose a defence, you become the challenger again and can fight your way back to the title.</p></div>
+      </details>
+      <details>
+        <summary>When can I retire?</summary>
+        <div class="a"><p>Once you've won the belt. Retiring is a legacy move: your champion banks Legacy, and every fighter after him trains cheaper and starts stronger. You choose when, so retiring on top is up to you.</p></div>
+      </details>
+      <details>
+        <summary>How do camp drills help in a fight?</summary>
+        <div class="a"><p>Pad Drills, Speed Bag, Sprawl Drill and Jump Rope are graded one to three stars. Your best grade on each one since your last fight becomes <b>Camp Prep</b> for the next real bout: a longer decision clock from Pads, a wider combo window from the Speed Bag, a wider react window from the Sprawl Drill and more gas at the bell from Jump Rope. Each of those four gives you 3 lives. The Heavy Bag is for cash, with a Power Hook if you hold and let go in the gold.</p></div>
+      </details>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>Playing comfortably</h2>
+    <div class="body">
+      <details>
+        <summary>The timing is too fast for me. Can I slow it down?</summary>
+        <div class="a"><p>Yes. Settings, then <b>Wider timing windows</b>. You get longer to pick a card, to react to his big moves and to hit the finish rings. Turn it on or off any time. Nothing is locked or reduced when it's on.</p></div>
+      </details>
+      <details>
+        <summary>How do I turn the sound or the music off?</summary>
+        <div class="a"><p>Settings has separate switches for <b>Sound</b> and <b>Music</b>, plus a <b>Volume</b> slider.</p></div>
+      </details>
+      <details>
+        <summary>The shakes and flashes bother me.</summary>
+        <div class="a"><p>Turn on <b>Reduce motion</b> in Settings. It removes the screen shake, flashes, slow motion and the knockout replay, and calms the drill effects. You still see who won and how. If Reduce Motion is on in your iPhone's Accessibility settings, the game follows that too.</p></div>
+      </details>
+      <details>
+        <summary>Do I need to be online?</summary>
+        <div class="a"><p>No. The whole game works offline, on a plane, anywhere. There's no login. You just can't watch ads while you're offline.</p></div>
+      </details>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>Ads and privacy</h2>
+    <div class="body">
+      <details>
+        <summary>Is it really free? Why are there ads?</summary>
+        <div class="a"><p>It's free, and there's nothing to buy in version 1.0. Ads are how a one-person game pays its way. Gold Gloves and Training Tokens are all earned by playing.</p></div>
+      </details>
+      <details>
+        <summary>Will an ad ever pop up on its own?</summary>
+        <div class="a"><p>No. Every ad is optional. One only plays when you tap a button that says so: the Cutman between rounds, double offline earnings, double fight results, or a Sponsor break in the Store for +3 Gold Gloves. There are no banners and no ads between screens. Skip those buttons and you'll never see an ad.</p></div>
+      </details>
+      <details>
+        <summary>I watched an ad and didn't get my reward.</summary>
+        <div class="a"><p>Sometimes an ad doesn't finish loading or gets cut short. You aren't charged anything, and the button comes back so you can try again. If no ad is ready, try again a bit later. If it keeps happening, send a report from Settings.</p></div>
+      </details>
+      <details>
+        <summary>Are the ads personalised?</summary>
+        <div class="a"><p>No. Ads come from Google AdMob and are non-personalised. The game doesn't ask to track you and doesn't use your phone's advertising identifier. Depending on where you live, Google's consent form may show before ads load. You can review your ad choices any time in Settings, under <b>Ad privacy</b>.</p></div>
+      </details>
+      <details>
+        <summary>Does the game send anything about me?</summary>
+        <div class="a"><p>Your save never leaves your phone. When you watch an ad, Google receives basic device and ad data so it can show it. At start the game downloads a small settings file, and nothing about you is sent with it.</p><p><b>Anonymous gameplay stats</b> are off by default. If you switch them on in Settings, the game sends counts of in-game events, game errors, the game version and a random install id. Never your fighter's name, anything you type, or your save. Our server keeps them for 90 days and doesn't store your IP address. Switch them off and sending stops straight away. The <a href="privacy.html">privacy policy</a> has the details.</p></div>
+      </details>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>The Arena</h2>
+    <div class="body">
+      <details>
+        <summary>Where is the Arena?</summary>
+        <div class="a"><p>It opens when you graduate Fight School, which means beating the Amateur boss in the final exam. After that it's a tile in the <b>☰</b> menu (top right).</p></div>
+      </details>
+      <details>
+        <summary>How do fighter codes work?</summary>
+        <div class="a">
+          <ul>
+            <li><span class="tag">SEND</span>In the Arena tap <b>SEND MY FIGHTER</b>. Your fighter's code is copied. Send it to a friend however you like: Messages, WhatsApp, Discord.</li>
+            <li><span class="tag">FIGHT</span>When a friend sends you theirs, copy the whole code (it starts with <code>CC1.</code>), paste it into <b>Fight a friend</b> and tap <b>LOAD FIGHTER</b>.</li>
+          </ul>
+          <p>Their fighter is played by the AI, using their stats, moves and habits. It isn't live, so you can fight them any time, even if they're asleep. Your first three Arena wins each day against a fair match pay 2 Gold Gloves each. There are no injuries and no purse in the Arena.</p>
+        </div>
+      </details>
+      <details>
+        <summary>The code says "That code doesn't read".</summary>
+        <div class="a"><p>Part of it is usually missing. Ask your friend to tap SEND MY FIGHTER again and copy the whole thing, from <code>CC1.</code> to the end, with no spaces added. If it still won't load, email us the code and I'll take a look.</p></div>
+      </details>
+      <details>
+        <summary>Someone's fighter has a rude name.</summary>
+        <div class="a"><p>Names from codes go through a filter, but no filter catches everything. Tap <b>HIDE</b> next to that fighter (or "Hide this fighter" when the code is loaded) and they're gone from your Arena. If you want to tell us about it, email us the name.</p></div>
+      </details>
+      <details>
+        <summary>Can I just spar myself?</summary>
+        <div class="a"><p>Yes. <b>SPAR MY SHADOW</b> in the Arena puts you against an AI copy of your own fighter. There are also club regulars to fight when you haven't got any codes yet.</p></div>
+      </details>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>Something's wrong</h2>
+    <div class="body">
+      <details open>
+        <summary>How do I report a bug?</summary>
+        <div class="a">
+          <p>The fastest way is from inside the game: Settings, then <b>REPORT A PROBLEM</b>. It copies your game version and a short diagnostic, then opens your mail app with my address filled in. Paste it in, add a line about what happened, and send.</p>
+          <p>If the game won't open, email <a href="mailto:almonicstudios@gmail.com?subject=Cage%20Champ%20bug">almonicstudios@gmail.com</a> with your iPhone model, iOS version, what you were doing, and a screenshot or screen recording if you can.</p>
+        </div>
+      </details>
+      <details>
+        <summary>The game froze or closed in the middle of a fight.</summary>
+        <div class="a"><p>Open it again. The game saves each exchange as it happens, so if you're back within 10 minutes you should land back in the same fight. If you don't, please send a report: that's exactly the kind of bug I want to hear about.</p></div>
+      </details>
+      <details>
+        <summary>I'm not getting reminders.</summary>
+        <div class="a"><p>Check Settings in the game (Reminders on), then your iPhone's Settings, Notifications, Cage Champ (Allow Notifications on). Reminders only come a few times a week at most.</p></div>
+      </details>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>Contact</h2>
+    <div class="contact">
+      <p class="mail"><a href="mailto:almonicstudios@gmail.com">almonicstudios@gmail.com</a></p>
+      <p>Bugs, questions, ideas, press. Almonic Studios.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p><a href="privacy.html">Privacy policy</a> · Last updated 12 October 2026</p>
+    <p class="muted" style="color:#d9ccff">Cage Champ is original fiction. The Vault and every fighter and coach in it are invented. No real promotion, athlete or brand is depicted.</p>
+  </footer>
+</div>
+</body>
+</html>
